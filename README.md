@@ -63,14 +63,14 @@ Packages used in building network and creation of gif:
 3. **Sensitivity analysis:** Explore the significance of the date of introduction of the infectious agent as well as the effect of randomsness within the between-herd transmission. 
 
 ## Files 
-The Project contain four main folders:
+The Project repository contain four main folders:
 - `Data` : This folder contains the raw data _(note that this data is not published, so users will need access to it or obtain it elsewhere)_. It also includes various datasets produced by running the model, both user-generated and pre-run by the author. Users can still use the model without access to the raw data but with limited options for transmission rate and movement frequency, while maintaining full flexibility for surveillance parameters (test intensity and test specificity).
 - `Model` : This folder contains all the scripts that comprise the model. See specific features within each script in the "Script Description" section. This folder also includes `interface.R`, which is used to run the entire model.
 - `DataAnalysis`: This folder contains scripts not used in the actual model. It includes various data analysis scripts exploring movement patterns and contact networks for each herd in the dataset, including the creation of a GIF dynamically showing the development of a contact network for a given herd. It also evaluates the SIR model versus the logistic growth model to evaluate the two methods against each other. It also contains a sensitivity analysis assessing the impact of certain assumptions/choices made during the model implementation.
 - `Results`: This folder include the folder `OutputModel` where the results (visual outputs) are stored when running the model. It also contains several results produced for the purpose of the Master Thesis. All figures/plots used in the thesis manuscript are accessible here.
 
 ### Sripts Description
-The repository include the following files
+#### Model
 + `interface.R` - Main script to run the model simulations.
   
 **Initialize:**
@@ -81,7 +81,10 @@ The repository include the following files
 **Modules:**
 + `RunningModel.R` - Sources all modules and scripts used for running the model with user-set parameters. The script is sourced through `interface.R`
 + `ReduceMovements.R` - Merges movements in the data to reduce movement frequency to a specific percentage specified in `interface.R`. The volume of livestock is identical but moved with the earliest of the combined moves. Movements to slaughter are not merged and remain constant.
-+ `Module1_Transmission.R` - Simulate the transmission of an infectious agent in the industry, given the parameters set in `interface.R`; transmission rate (beta), movement frequency, test intensity, and test specificity. Each iteration in the simulation represents a possible index herd of the infectious agent. The output is a full transmission pattern for each index herd, stored in the `Data/Module1_transmission` folder. 
++ `Module1_Transmission.R` - Simulate the transmission of an infectious agent in the industry, given the parameters set in `interface.R`; transmission rate (beta), movement frequency, test intensity, and test specificity. Each iteration in the simulation represents a possible index herd of the infectious agent. The output is a full transmission pattern for each index herd, stored in the `Data/Module1_transmission` folder.
++ `Module2a_TestSlaughter.R` - Simulate detection via samples taken at slaughter for each index herd given test intencity and test specificity. The siulation is based on the transmission patterns obtained in the transmission module. The output is the propagation at detection and time of detection for each index herd which is stored in the `Data/Module2a_TestSlaughter` folder.
++ `Module2b_VisualInspection.R` - Simulate detection via observation of presenting of clinical symptoms at herd-level for each index herd with non-flexible parameters. The siulation is based on the transmission patterns obtained in the transmission module. The output is the propagation at detection and time of detection for each index herd which is stored in the `Data/Module2b_VisualInspection` folder.
++ `Module3_Visualization` -  Produce the visual outputs from running the model based n the produced data-outputs from the three modules. The output is stored in the `Results/OutputModel` folder.
 
 
 ## Corresponding Author
