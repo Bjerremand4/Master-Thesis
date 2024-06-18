@@ -60,6 +60,7 @@ Packages used in building network and creation of gif:
 ## Usage
 1. **Running the Model:** Execute the main interface script to start the model. This script will guide you through the simulation process and allow you to adjust various parameters.
 2. **Exploring Data Analysis Scripts:** Open and run the Data Analysis scripts to investigate movement patterns and infection dynamics for each herd. These scripts provide additional insights beyond the main model output.
+3. **Sensitivity analysis:** Exploring the significance of the date of introduction of the infectious agent as well as the randomsness within the between-herd transmission. 
 
 ## Files 
 The Project contain 4 main folders:
