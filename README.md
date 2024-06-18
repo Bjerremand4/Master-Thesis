@@ -62,6 +62,12 @@ Packages used in building network and creation of gif:
 2. **Exploring Data Analysis Scripts:** Open and run the Data Analysis scripts to investigate movement patterns and infection dynamics for each herd. These scripts provide additional insights beyond the main model output.
 
 ## Files 
+The Project contain 4 main folders:
+- `Data` : This contains the Raw data (which is not pulished, so the user need access to it or find it some where else). It also contain a lot of different produced data by running the model (Both when used by the user but also preRun by me). This enables the user to use the model even without access to the raw data, just witch limited options for Transmission rate and movement frequency, however free flexibility for surveillance parameters (test intencity and test specificity).
+- `Model` : This folder contains all the scripts that make up the model, see specifics fetures within each script in the "Script Description" Section. This folder also contains the `interface.R` which is used to run the entire model. 
+- `DataAnalysis`: This folder contains scripts which are not used in the actual model. It hos a lot of Data analysis scripts which explores the movement pattern and contact networks for each herd in the Data including creation of a gif that danicly show the deveopment of a contact network for a given herd. It also explores the SIR model vs. the logistic growth model to evaluate the two methods against each other. Further it contains a sensitivity analysis which asses the effect of some assumptions/choices made whem implementing the model.
+- `Results`: This folder include the folder `OutputModel` which is vere the reslts will be stored when running the model. It also contains several result produced for the purpose of the master Thesis. All the figure/plot used in the manuscript of the aster thesis in accessible here.  
+
 ### Sripts Description
 The repository include the following files
 + `interface.R` - Main script to run the model simulations.
