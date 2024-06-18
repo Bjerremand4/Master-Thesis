@@ -84,7 +84,8 @@ The Project repository contain four main folders:
 + `Module1_Transmission.R` - Simulate the transmission of an infectious agent in the industry, given the parameters set in `interface.R`; transmission rate (beta), movement frequency, test intensity, and test specificity. Each iteration in the simulation represents a possible index herd of the infectious agent. The output is a full transmission pattern for each index herd, stored in the `Data/Module1_transmission` folder.
 + `Module2a_TestSlaughter.R` - Simulate detection via samples taken at slaughter for each index herd given test intencity and test specificity. The siulation is based on the transmission patterns obtained in the transmission module. The output is the propagation at detection and time of detection for each index herd which is stored in the `Data/Module2a_TestSlaughter` folder.
 + `Module2b_VisualInspection.R` - Simulate detection via observation of presenting of clinical symptoms at herd-level for each index herd with non-flexible parameters. The siulation is based on the transmission patterns obtained in the transmission module. The output is the propagation at detection and time of detection for each index herd which is stored in the `Data/Module2b_VisualInspection` folder.
-+ `Module3_Visualization` -  Produce the visual outputs from running the model based n the produced data-outputs from the three modules. The output is stored in the `Results/OutputModel` folder.
++ `Module3_Visualization.R` -  Produce the visual outputs from running the model based n the produced data-outputs from the three modules. The output is stored in the `Results/OutputModel` folder.
++ `All_Visualizations.R` - A script that collects all DataAnalysis visulizations. 
 
 
 ## Corresponding Author
