@@ -58,16 +58,16 @@ Packages used in building network and creation of gif:
 + `gtools`: Various R programming tools, including the `mixedsort` function for sorting images for GIF creation.
 
 ## Usage
-1. **Running the Model:** Execute the main interface script to start the model. This script will guide you through the simulation process and allow you to adjust various parameters.
-2. **Exploring Data Analysis Scripts:** Open and run the Data Analysis scripts to investigate movement patterns and infection dynamics for each herd. These scripts provide additional insights beyond the main model output.
-3. **Sensitivity analysis:** Exploring the significance of the date of introduction of the infectious agent as well as the randomsness within the between-herd transmission. 
+1. **Running the Model:** Execute the `interface.R` script to start the model. This script guides you through the simulation process and allows you to adjust various parameters for a customized analysis.
+2. **Exploring Data Analysis Scripts:** Open and run the Data Analysis scripts to investigate movement patterns and infection dynamics for each herd. These scripts offer additional insights beyond the main model output.
+3. **Sensitivity analysis:** Explore the significance of the date of introduction of the infectious agent as well as the effect of randomsness within the between-herd transmission. 
 
 ## Files 
-The Project contain 4 main folders:
-- `Data` : This contains the Raw data (which is not pulished, so the user need access to it or find it some where else). It also contain a lot of different produced data by running the model (Both when used by the user but also preRun by me). This enables the user to use the model even without access to the raw data, just witch limited options for Transmission rate and movement frequency, however free flexibility for surveillance parameters (test intencity and test specificity).
-- `Model` : This folder contains all the scripts that make up the model, see specifics fetures within each script in the "Script Description" Section. This folder also contains the `interface.R` which is used to run the entire model. 
-- `DataAnalysis`: This folder contains scripts which are not used in the actual model. It hos a lot of Data analysis scripts which explores the movement pattern and contact networks for each herd in the Data including creation of a gif that danicly show the deveopment of a contact network for a given herd. It also explores the SIR model vs. the logistic growth model to evaluate the two methods against each other. Further it contains a sensitivity analysis which asses the effect of some assumptions/choices made whem implementing the model.
-- `Results`: This folder include the folder `OutputModel` which is vere the reslts will be stored when running the model. It also contains several result produced for the purpose of the master Thesis. All the figure/plot used in the manuscript of the aster thesis in accessible here.  
+The Project contain four main folders:
+- `Data` : This folder contains the raw data _(note that this data is not published, so users will need access to it or obtain it elsewhere)_. It also includes various datasets produced by running the model, both user-generated and pre-run by the author. Users can still use the model without access to the raw data but with limited options for transmission rate and movement frequency, while maintaining full flexibility for surveillance parameters (test intensity and test specificity).
+- `Model` : This folder contains all the scripts that comprise the model. See specific features within each script in the "Script Description" section. This folder also includes `interface.R`, which is used to run the entire model.
+- `DataAnalysis`: This folder contains scripts not used in the actual model. It includes various data analysis scripts exploring movement patterns and contact networks for each herd in the dataset, including the creation of a GIF dynamically showing the development of a contact network for a given herd. It also evaluates the SIR model versus the logistic growth model to evaluate the two methods against each other. It also contains a sensitivity analysis assessing the impact of certain assumptions/choices made during the model implementation.
+- `Results`: This folder include the folder `OutputModel` where the results (visual outputs) are stored when running the model. It also contains several results produced for the purpose of the Master Thesis. All figures/plots used in the thesis manuscript are accessible here.
 
 ### Sripts Description
 The repository include the following files
@@ -75,13 +75,13 @@ The repository include the following files
   
 **Initialize:**
 + `Load_packages.R` - Installs and load all necesary packages
-+ `Define_Functions.R` - Defines all functions to be utalized in the model.
-+ `LoadNClean_Data.R` - Load the available raw data from the Data/Raw folder, and manipulates it so its ready for simulation
++ `Define_Functions.R` - Defines all functions utilized in the model.
++ `LoadNClean_Data.R` - Loads and cleans the available raw data from the `Data/Raw` folder, preparing it for simulation.
 
 **Modules:**
-+ `RunningModel.R` - Model that sources all the modules and script used for running the model with the userset parameters. The script is sourced through `interface.R`
-+ `ReduceMovements.R` - Merges moves in data together so the movement frequency is reduced to a specific percentage specified in `interface.R`. The volume of livestock is identical but shipped on the earliest of the combined moves. Movements to slaughter are not merged but kept constant.
-+ `Module1_Transmission.R` - Simulate the transmission of an infectious agent in the industry, given the following parameters all set in `interface.R`; Transmission rate (beta), Movement frequency, Test intencity  and corresponding test specificity. Each iteration in the simulation represent a possible index herd of the infectious agent. The output is a full transmission pattern for each index herd, which is stored in the Folder `Data/Module1_transmission`. 
++ `RunningModel.R` - Sources all modules and scripts used for running the model with user-set parameters. The script is sourced through `interface.R`
++ `ReduceMovements.R` - Merges movements in the data to reduce movement frequency to a specific percentage specified in `interface.R`. The volume of livestock is identical but moved with the earliest of the combined moves. Movements to slaughter are not merged and remain constant.
++ `Module1_Transmission.R` - Simulate the transmission of an infectious agent in the industry, given the parameters set in `interface.R`; transmission rate (beta), movement frequency, test intensity, and test specificity. Each iteration in the simulation represents a possible index herd of the infectious agent. The output is a full transmission pattern for each index herd, stored in the `Data/Module1_transmission` folder. 
 
 
 ## Corresponding Author
