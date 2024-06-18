@@ -1,6 +1,7 @@
 # Master-Thesis Model
 This GitHub contains the scripts related to the Master Thesis: **_Integrating Livestock Movement Data in a Dynamic Model for Spread and Surveillance of New Infectious Agents in the Danish Pig Production_**
-_(note that this data is not published, so users will need access to it or obtain it elsewhere)_
+
+_(note that the raw data is not published due to GDPR reasons, so users will need access to it or obtain it elsewhere)_
 
 This study presents a dynamic model designed to simulate the spread of newly introduced infectious agents in the Danish Commercial pig production and the effect of surveillance. The model specifically evaluates two main aspects: the total number of infected herds at detection and the time from introduction to detection under various surveillance strategies, and movement frequencies.
 wo types of testing included; Testing at slaughter and observation of symptoms in livestock.
