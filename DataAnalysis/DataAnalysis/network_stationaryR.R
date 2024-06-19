@@ -2,12 +2,11 @@
 #                 Creating a GIF for moving patterns 
 # -------------------------------------------------------------------------
 
-# Load packages -----------------------------------------------------------
-source(file.path("Initialize/Load_packagesNfunctions.R"))
-
-
-# Load and clean data  -----------------------------------------------------
-source(file.path("Initialize/LoadNClean_Data.R"))
+# Initialize -----------------------------------------------------------
+source(file.path("../Model/Initialize/Load_packages.R"))
+source(file.path("../Model/Initialize/Define_Functions.R"))
+rawData = FALSE # Change if you have access to row data
+source(file.path("../Model/Initialize/LoadNClean_Data.R"))
 
 contact_farms_outputlist <- readRDS("../Data/dataAnalysis/Full_contact_farms.rds")
 
