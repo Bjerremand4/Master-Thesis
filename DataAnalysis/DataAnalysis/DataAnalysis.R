@@ -1,11 +1,8 @@
-# Pakages -----------------------------------------------------------------
-library(tidyverse)
-library(lubridate)
-library(readxl)
-
-# Pseudo code -------------------------------------------------------------
-
-
+# Initialize -----------------------------------------------------------
+source(file.path("../Model/Initialize/Load_packages.R"))
+source(file.path("../Model/Initialize/Define_Functions.R"))
+rawData = FALSE # Change if you have access to row data
+source(file.path("../Model/Initialize/LoadNClean_Data.R"))
 
 # SIR function ------------------------------------------------------------
 # The function takes in rate for a specific disease, runs for a given number og days and outputs the status of the last day
