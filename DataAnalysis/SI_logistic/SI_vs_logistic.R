@@ -1,5 +1,8 @@
-# Load packages
-source(file.path("../Model/Initialize/Load_packagesNfunctions.R"))
+# Initialize -----------------------------------------------------------
+source(file.path("../Model/Initialize/Load_packages.R"))
+source(file.path("../Model/Initialize/Define_Functions.R"))
+rawData = FALSE # Change if you have access to row data
+source(file.path("../Model/Initialize/LoadNClean_Data.R"))
 
 # SI model using desolve. (USED)
 SI_model = function (current_timepoint, state_values, parameters)
