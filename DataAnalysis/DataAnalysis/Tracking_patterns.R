@@ -1,10 +1,9 @@
 
-# Load packages -----------------------------------------------------------
-source(file.path("../Initialize/Load_packages.R"))
-
-
-# Load and clean data  -----------------------------------------------------
-source(file.path("../Initialize/LoadNClean_Data.R"))
+# Initialize -----------------------------------------------------------
+source(file.path("../Model/Initialize/Load_packages.R"))
+source(file.path("../Model/Initialize/Define_Functions.R"))
+rawData = FALSE # Change if you have access to row data
+source(file.path("../Model/Initialize/LoadNClean_Data.R"))
 
 # -------------------------------------------------------------------------
 #                           PAIR CONTACTS
