@@ -14,7 +14,7 @@ Additionally, several Data Analysis scripts are included with the project. These
 
 - [Installation and Dependencies](#installation)
 - [Usage](#usage)
-- [Sripts Description](#Sripts-Description)
+- [File Descriptions](#Sripts-Description)
 - [Coresponding Author](#Coresponding-Author)
 
   
