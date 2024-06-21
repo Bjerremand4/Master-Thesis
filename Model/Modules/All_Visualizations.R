@@ -1,11 +1,11 @@
 # -------------------------------------------------------------------------
 #                           Visualizations  
 # -------------------------------------------------------------------------
-# Load packages -----------------------------------------------------------
-source(file.path("Initialize/Load_packagesNfunctions.R"))
-
-
-# Load and clean data  -----------------------------------------------------
+# Load packages and functions
+options(encoding = "UTF-8") # Make sure to use right encoding to avoid issues when first running model
+source(file.path("Initialize/Load_packages.R"))
+source(file.path("Initialize/Define_Functions.R"))
+rawData = T # Change if you have access to row data
 source(file.path("Initialize/LoadNClean_Data.R"))
 
 
